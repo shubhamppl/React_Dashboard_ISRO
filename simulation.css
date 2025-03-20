@@ -1,0 +1,480 @@
+/* Main Layout */
+.dashboard {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.header {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation */
+.nav-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-tab {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.nav-tab.active {
+  background-color: #98FB98;  /* Changed to light green */
+  color: #333;  /* Changed to dark text for better contrast */
+}
+
+/* Filters */
+.filters {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-select {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+}
+
+.clear-btn {
+  padding: 0.5rem 1rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Main Content Grid */
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Satellite Data */
+.satellite-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.satellite-graph {
+  height: auto !important;
+  background-color: white;
+  border-radius: 0.25rem;
+  position: relative;
+  overflow: visible;
+}
+
+/* Map Section */
+.map-container {
+  position: relative;
+  height: 100%;
+  min-height: 400px;  /* Increased from 300px */
+  max-height: 450px;  /* Increased from 350px */
+  background-color: #dbeafe;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.map-controls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.map-button {
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 0.25rem;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Data Table */
+.table-container {
+  margin: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.data-table th {
+  background-color: #f9fafb;
+  font-weight: 500;
+}
+
+.highlighted-row {
+  background-color: #fefce8;
+}
+
+/* Timeline */
+.timeline {
+  margin: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-header {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.timeline-hour {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  border-right: 1px solid #e5e7eb;
+}
+
+.timeline-row {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.timeline-satellite-id {
+  width: 6rem;
+  font-weight: bold;
+}
+
+.timeline-slot {
+  flex: 1;
+  padding: 0.5rem;
+  border-right: 1px solid #e5e7eb;
+}
+
+.timeline-indicator {
+  height: 1rem;
+  border-radius: 0.25rem;
+}
+
+.timeline-indicator.active {
+  background-color: #98FB98;  /* Changed to light green */
+}
+
+.timeline-indicator.inactive {
+  background-color: #e5e7eb;
+}
+
+.timeline-indicator.grey {
+  background-color: #e5e7eb;
+}
+
+/* Combined Layout */
+.top-graphs-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.combined-table-container {
+  margin: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.combined-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.combined-table th,
+.combined-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+}
+
+.timeline-header-cell {
+  width: 40px;
+  text-align: center;
+  font-size: 0.75rem;
+  background-color: #f9fafb;
+}
+
+.timeline-cell {
+  padding: 0.25rem;
+  text-align: center;
+}
+
+.timeline-indicator {
+  height: 0.75rem;
+  border-radius: 0.25rem;
+  margin: 0 auto;
+}
+
+.grey-cell {
+  background-color: #f3f4f6;
+}
+
+/* Green Blocks */
+.green-block {
+  background-color: rgba(152, 251, 152, 0.1) !important;  /* Changed to light green with transparency */
+}
+
+.green-block .timeline-indicator.active {
+  background-color: #80fa80 !important;  /* Changed to light green */
+}
+
+.table-wrapper {
+  position: relative;
+  overflow-x: auto;
+}
+
+.current-time-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #ff0000;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.current-time-indicator-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.time-label {
+  white-space: nowrap;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* New Layout */
+.main-layout {
+  display: grid;
+  grid-template-columns: 650px 1fr;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.right-panel {
+  min-height: 400px;
+}
+
+.graphs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.satellite-card.stacked {
+  margin: 0;
+  height: auto;
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.map-section {
+  height: 100%;
+}
+
+.map-container {
+  height: 100%;
+  min-height: 750px;  /* Increased from 300px */
+  max-height: 800px;  /* Increased from 350px */
+  background-color: #dbeafe;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Satellite Icon Styles */
+.satellite-icon {
+  font-size: 20px;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+}
+
+/* Antenna Icon Styles */
+.antenna-icon {
+  font-size: 24px;
+  text-align: center;
+  line-height: 24px;
+}
+
+.leaflet-popup-content {
+  min-width: 200px;
+}
+
+.leaflet-popup-content h3 {
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+.leaflet-popup-content p {
+  margin: 4px 0;
+  color: #666;
+  font-size: 12px;
+}
+
+/* Enhanced Satellite Styling */
+.satellite-path-glow {
+  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
+}
+
+.satellite-tooltip {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.satellite-popup {
+  min-width: 250px;
+}
+
+.satellite-popup h3 {
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+.satellite-popup p {
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+.satellite-popup ul {
+  margin: 4px 0;
+  padding-left: 20px;
+}
+
+.satellite-popup li {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Playback Controls */
+.playback-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 1000;
+}
+
+.playback-controls button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #f3f4f6;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.playback-controls button:hover {
+  background: #e5e7eb;
+}
+
+.playback-controls select {
+  padding: 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+
+.speed-input {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.speed-input input {
+  width: 80px;
+  padding: 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background: white;
+  font-size: 14px;
+}
+
+.speed-input input:focus {
+  outline: none;
+  border-color: #2196F3;
+}
+
+.speed-input span {
+  color: #666;
+  font-size: 14px;
+}
